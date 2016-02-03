@@ -2,6 +2,7 @@
 
 ### Convert a VCF in to the per locus output usually seen in GATK's DepthOfCoverage.
 ### USAGE: python vcf_to_gatk_per_locus.py <vcf input> <GATK per locus output>
+### Requires PyVCF and natsort.
 ### John Letaw 02/03/16
 
 import sys
