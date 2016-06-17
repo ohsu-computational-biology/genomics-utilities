@@ -21,8 +21,8 @@ def merge_intervals(intervals):
         else:
             last_coord = merged.pop()
             # Check for overlap, if not, append both the previous coordinate and new_coordinate to merged.
-            if last_coord[1] >= interval[0]:
-                new_ival = (last_coord[0], interval[1])
+            if last_coord[1] >= interval[0]:#we know interval[0]>last_coord[0]
+                new_ival = (min(last_coord[0],interval[0]), max(last_coord[1],interval[1]) )
                 merged.append(new_ival)
             else:
                 merged.append(last_coord)
